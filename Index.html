@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Facts 🚀</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      color: #4f46e5;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .fact-box {
+      background: #f3f4f6;
+      padding: 30px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #fact {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    button {
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      background: #4f46e5;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #7c3aed;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 25px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🌍 Fun Facts</h1>
+
+    <p class="subtitle">
+      Discover something interesting with every click!
+    </p>
+
+    <div class="fact-box">
+      <p id="fact">
+        Click the button to discover a fun fact! 🚀
+      </p>
+    </div>
+
+    <button onclick="showFact()">
+      🎲 Show Another Fact
+    </button>
+
+    <footer>
+      Created by Ozokoru Venture ❤️
+    </footer>
+  </div>
+
+  <script>
+    const facts = [
+      "🐙 Octopuses have three hearts.",
+      "🍌 Bananas are technically berries.",
+      "🌕 The Moon is moving away from Earth by about 3.8 cm every year.",
+      "🦈 Sharks existed before trees.",
+      "🐝 Honeybees can recognize human faces.",
+      "🌍 Earth is the only known planet with life.",
+      "🧠 The human brain uses about 20% of the body's energy.",
+      "🦒 A giraffe's tongue can be around 45 cm long.",
+      "🐧 Penguins can jump several times their body height.",
+      "💧 Water can exist naturally in three states: solid, liquid and gas."
+    ];
+
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").textContent = facts[randomIndex];
+    }
+  </script>
+
+</body>
+  </html>
